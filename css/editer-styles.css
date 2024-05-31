@@ -1,0 +1,95 @@
+body{
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: rgb(135, 52, 52);
+    background-color: bisque;
+    overflow-y: scroll; /* Вертикальная прокрутка */
+    height: 100vh;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+header{
+    text-align: center;
+}
+header h1{
+    margin: 0;
+    font-size: 55px;
+    -webkit-text-stroke: 2px #FFC000;
+    -webkit-text-fill-color: transparent;
+}
+button{
+    border: none;
+    color: goldenrod;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 17px;
+    margin: 5px 3px;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: color 0.5s ease;
+}
+button:hover{
+    color: #FFD903;
+}
+
+/* Стиль ввода и надписей редактирования */
+#edit-profile-form{
+    max-width: 600px;
+    margin: 23px auto;
+    padding: 15px;
+    background-color: gray;
+    border-radius: 8px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    opacity: 0;
+    animation: fadeIn 0.6s ease-in-out forwards;
+}
+#edit-profile-form label{
+    display: block;
+    margin-bottom: 4px;
+    color: #a54747;
+    font-weight: bold;
+
+}
+#edit-profile-form input[type="text"],
+#edit-profile-form input[type="email"],
+#edit-profile-form input[type="password"],
+#edit-profile-form textarea{
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+    opacity: 0;
+    animation: fadeInUp 0.5s ease forwards;
+}
+#edit-profile-form textarea{
+    height: 100px;    
+}
+
+
+@keyframes fadeIn {
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+}
+@keyframes fadeInUp {
+    0%{
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    50%
+    {
+        opacity: 0.5;
+    }
+    100%{
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+}

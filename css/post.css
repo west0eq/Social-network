@@ -1,0 +1,94 @@
+body{
+    background-color: bisque;
+}
+
+.post-container, .comment-form-container, .commnets-container{
+    background-color: grey;
+    padding: 40px;
+    margin: 40px auto;
+    border-radius: 10px;
+    box-shadow: 0 5px 9px rgba(0, 0, 0, 0.08), 0 7px 20px rgba(0, 0, 0, 0.1);
+    max-width: 800px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+.post-container:hover, .comment-form-container:hover, .commnets-container:hover{
+    transform: translateY(-7px);
+    box-shadow: 0 9px 18px rgba(0, 0, 0, 0.1), 0 12px 25px rgba(0, 0, 0, 0.15);
+}
+
+.post-container h1, .commnets-container h3{
+    color: brown;
+    margin-bottom:  20px;
+    font-size: 26px;
+}
+
+.author-name, .comment p b{
+    font-weight: bold;
+    font-size: 19px;
+    color:darkred;
+    margin-bottom: 20px;
+}
+.post-container p, .comment p{
+    color: darkred;
+    font-size: 17px;
+    line-height: 1.8;
+}
+.post-container img{
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+    margin-bottom: 24px;
+    object-fit: cover;
+}
+.post-time{
+    color: #888;
+    font-size: 15px;
+    margin-top: 23px;
+    text-align: right;
+}
+.comment-form-container label, .comment-form-container button{
+    font-size: 19px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+.comment-form-container textarea{
+    width: 100%;
+    padding: 10px;
+    font-size: 18px;
+    border-radius: 7px;
+    border: 3px solid black;
+    resize: vertical;
+}
+
+.comment-form-container button{
+    padding: 12px 22px;
+    background-color: darkgray;
+    color: brown;
+    border: none;
+    border-radius: 7px;
+    cursor: grab;
+    transition: background-color 0.5s ease;
+
+}
+
+.comment-form-container button:hover{
+    background-color:rgb(110, 110, 110) ;
+}
+
+.comments-container .comment{
+    margin-bottom: 22px;
+    transition: background-color 0.5s ease;
+}
+
+.comments-container .comment:hover{
+    padding-left: 7px;
+    border-radius: 7px;
+    background-color: grey;
+}
+
+
+
+
+
+

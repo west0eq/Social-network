@@ -1,0 +1,81 @@
+body{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: darkgrey;
+    color: brown;
+}
+header{
+    background-color: antiquewhite;
+    padding: 20px;
+    text-align: center;
+    height: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+header h1{
+    text-align: center;
+    margin: 0;
+    color: darkorange;
+    font-size: 55px;
+    -webkit-text-stroke: 1px goldenrod;
+    -webkit-text-fill-color: transparent;
+}
+
+.table_shop{
+    font-weight: bold;
+    font-size: 30px;
+    width: 80%;
+    margin: 0 auto;
+    border-collapse: collapse;
+    background-color:darkgoldenrod;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 80px;
+    animation: fadeIn 0.7s ease-in-out;
+
+}
+.table_shop1{
+    font-size: 20px;
+    width: 80%;
+    margin: 0 auto;
+    border-collapse: collapse;
+    margin-top: 20px;
+    background-color: #f9f9f9;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    animation: fadeIn 0.7s ease-in-out;
+
+}
+
+@keyframes fadein {
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+}
+
+.table_shop1 tr:nth-child(odd){
+    background-color: #f2f2f2;
+}
+.table_shop1 th,
+.table_shop1 td{
+    padding: 20px;
+    text-align: center;
+    border-bottom: 1px solid black;
+}
+
+.table_shop1 tr:hover{
+    background-color: #dadada;
+    transition: background-color 0.5s ease-in-out;
+}
+
+.table_shop1 tfoot{
+    font-weight: bold;
+}
+.table_shop1 img{
+    max-width: 100px;
+    min-height: 100px;
+}

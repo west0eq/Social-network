@@ -1,0 +1,103 @@
+body{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: darkgrey;
+    color: brown;
+    animation: fadeIn 0.7s ease-in-out forwards;
+    font-size: 20px;
+
+}
+
+@keyframes fadeIn {
+    from{
+        opacity: 0;
+        transform: translateY(-25px);
+    }
+    to{
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+    
+}
+header{
+    background-color: antiquewhite;
+    padding: 20px;
+    text-align: center;
+    height: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+header h1{
+    text-align: center;
+    margin: 0;
+    color: darkorange;
+    font-size: 55px;
+    -webkit-text-stroke: 1px goldenrod;
+    -webkit-text-fill-color: transparent;
+}
+.assortment{
+    padding: 20px;
+}
+
+.zagolovok-shop{
+    padding: 20px;
+    text-align: center;
+    height: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.zagolovok-shop a.korzina{
+    display: inline-block;
+    justify-content: center;
+    background-image: linear-gradient(45deg, darkorange, brown);
+    width: 30%;
+    padding: 10px 20px;
+    background-color: darkgray;
+    color: brown;
+    font-size: 29px;
+    text-decoration: none;
+    border-radius: 30px;
+    margin-left: auto;
+    margin-right: auto;
+    transition: all 0.4s ease;
+}
+.zagolovok-shop a.korzina:hover{
+    box-shadow: 0 10px 12px rgba(0, 0, 0, 0.3);
+    transform: translateY(-5px);
+}
+
+.products{
+    margin-top: 24px;
+}
+.table_shop{
+    width: 100%;
+    border-collapse: collapse;
+    
+}
+
+.table_shop th, .table_shop td{
+    padding: 10px;
+    text-align: center;
+    border-bottom: 2px solid black;
+    font-size: 24px;
+}
+
+.table_shop th{
+    font-size: 32px;
+}
+.add-to-cart{
+    background-color: darkgoldenrod;
+    border: none;
+    padding: 14px 29px;
+    font-size: 17px;
+    border-radius: 9px;
+    transition: all 0.4s ease;
+}
+.add-to-cart:hover{
+    transform: translateX(9px);
+}

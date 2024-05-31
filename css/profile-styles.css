@@ -1,0 +1,177 @@
+body{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: bisque;
+    color: rgb(135, 52, 52);
+    opacity: 0;
+    animation: slideIn 0.7s ease-in-out forwards;
+}
+
+@keyframes slideIn{
+    from{
+        opacity: 0;
+        transform:translateY(-30px);
+
+    }
+    to{
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+header{
+    background-color: grey;
+    padding: 25px;
+    text-align: center;
+}
+
+header h1{
+    margin: 0;
+    font-size: 58px;
+    -webkit-text-stroke: 1px #FFC000;
+    -webkit-text-fill-color: transparent;
+}
+
+button{
+    border: none;
+    color: goldenrod;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 17px;
+    margin: 5px 3px;
+    cursor: pointer;
+    border-radius: 8px;
+}
+
+/* стиль о пользователе */
+
+#profile-info{
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+}
+
+#profile-info h2{
+    color:rgb(135, 52, 52);
+    font-size: 25px;
+    margin-bottom: 12px;
+    text-align: center;
+}
+#profile-info p{
+    font-size: 17px;
+    margin-bottom: 9px;
+    font-weight: bold;
+}
+
+#profile-picture-container{
+    width: 200px;
+    height: 200px;
+    overflow: hidden;
+    border-radius: 10%;
+    margin: 0 auto 10px auto;
+}
+#profile-picture{
+    width: 100%;
+    height: auto;
+    border-radius: 10%;
+}
+
+button:hover{
+    box-shadow: 0 0 10px rgb(202, 83, 40);
+    border-radius: 30px;
+}
+
+/* Стили для списка постов */
+
+#user-posts{
+    padding: 20px;
+    margin: 20px;
+    border-radius: 15px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+}
+#user-posts h2{
+    color:rgb(135, 52, 52);
+    font-size: 25px;
+    margin-bottom: 12px;
+    
+}
+#posts-list{
+    list-style: none;
+    padding: 0;
+}
+#posts-list li{
+    border-bottom: 1px solid #000000;
+    padding: 10px 0;
+}
+#posts-list p{
+    font-size: 17px;
+    margin-bottom: 9px;
+    /* font-weight: bold; */
+}
+.comments-count{
+    font-weight: bold;
+    font-size: 17px;
+}
+
+.post-block{
+    background-color: gray;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    box-shadow: 0 5px 9px rgba(0, 0, 0, 0.2);
+    color: darkred;
+    display: flex;
+    align-items: flex-start;
+}
+.post-image{
+    flex-shrink: 0;
+    width: 150px;
+    height: 150px;
+    margin-right: 20px;
+    overflow: hidden;
+    border-radius: 9px;
+}
+
+.post-image img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.post-content{
+    flex: 1;
+}
+.post-block h3{
+    margin-top: 0;
+    color: rgb(26, 73, 126);
+}
+.post-block h3 a{
+    color: inherit;
+    text-decoration: none;
+}
+.post-content p{
+    color: rgb(176, 176, 176);
+    margin: 10px 0;
+}
+.post-content p:last-child{
+    color: rgb(139, 103, 61);
+    margin: 10px 0;
+    font-weight: bold;
+    font-style: italic;
+}
+.post-image:hover{
+    transform: scale(1.2);
+    transition: transform 0.5s ease-in-out;
+}
+
+.post-block h3:hover{
+    color: darksalmon;
+    transition: color 0.5s ease-in-out;
+    text-decoration: underline;
+}
+
+
+

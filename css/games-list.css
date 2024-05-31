@@ -1,0 +1,67 @@
+body{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #353746;
+    color: #eeeeec;
+
+}
+
+header{
+    background-color: #464c5e;
+    font-size: 56px;
+    padding: 20px;
+    height: 90px;
+    text-align: center;
+    margin-bottom: 20px;
+    -webkit-text-stroke: 3px #FFC000;
+    -webkit-text-fill-color: transparent;
+}
+.container{
+    margin: 20px auto;
+}
+
+.game-list{
+    width: calc(100%-40px);
+    border-collapse: collapse;
+    margin: 20px;
+    font-size: 35px;
+}
+.game-list th{
+    background-color: #464c5e;
+    font-size: 44px;
+    padding: 15px;
+    text-align: center;
+}
+.game-list td{
+    padding: 15px;
+    text-align: center;
+}
+.game-list td:nth-child(1){
+    width: 380px;
+}
+
+.game-list td:nth-child(2){
+    text-align: left;
+    font-size: 25px;
+}
+.game-list tr:nth-child(even){
+    background-color: #3a3e4d;
+}
+.game-list tr:nth-child(odd){
+    background-color: #464c5e;
+}
+.game-list tr{
+    transition: background-color 0.4s;
+}
+.game-list tr:hover{
+    background-color: #4f5469;
+}
+a{
+    color: #FFC000;
+    text-decoration: none;
+}
+a:hover{
+    color: #ffd903;
+    text-decoration: underline;
+}

@@ -1,0 +1,85 @@
+body{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: darkgrey;
+    color: brown;
+}
+
+header{
+    background-color: antiquewhite;
+    padding: 20px;
+    text-align: center;
+    height: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+header h1{
+    text-align: center;
+    margin: 0;
+    color: darkorange;
+    font-size: 55px;
+    -webkit-text-stroke: 1px goldenrod;
+    -webkit-text-fill-color: transparent;
+}
+
+.table_shop{
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+.table_shop th{
+   padding: 15px;
+   text-align: center;
+}
+.table_shop tr:nth-child(even){
+ background-color: darksalmon;
+ animation: slideRightToLeft 0.9s ease-in-out forwards;
+}
+.table_shop tr:nth-child(odd){
+    background-color: darkgoldenrod;
+    animation: slideLeftToRight 0.9s ease-in-out forwards;
+
+}
+.table_shop tr:hover{
+    background-color: rgba(255, 255, 255, 0.2);
+
+}
+@keyframes slideRightToLeft {
+    from{
+        transform: translateX(100%);
+        opacity: 0;
+    }
+    to{
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideLeftToRight {
+    from{
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+    to{
+        transform: translateX(0);
+        opacity: 1;
+    }   
+}
+
+a:hover{
+    color: darkorange;
+    text-decoration: underline;
+}
+.table_shop td{
+    font-size: 25px;
+    padding: 15px;
+    text-align: center;
+    color: rgb(191, 22, 22);
+    
+}
+img{
+    border-radius: 5px;
+}

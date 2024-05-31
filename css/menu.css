@@ -1,0 +1,187 @@
+
+/*Чекбокс для скрытия меню*/
+[type="checkbox"]:checked,[type="checkbox"]:not(:checked){
+    position: absolute;
+    left: -9999px;
+}
+
+.menu-icon:checked + label, .menu-icon:not(:checked) + label{
+ position: fixed;
+ top: 64px;
+ right: 75px;
+ display: block;
+ width: 30px;
+ height: 30px;
+ padding: 0;
+ margin: 0;
+ cursor: pointer;
+ z-index: 10;   
+}
+/*Стиль линий иконки*/
+.menu-icon:checked + label:before, .menu-icon:not(:checked) + label:before{
+    position: absolute;
+    content: '';
+    display: block;
+    width: 30px;
+    height: 20px;
+    z-index: 20;
+    top: 0;
+    left: 0;
+    border-top: 2px solid rgb(135, 52, 52);
+    border-bottom: 2px solid rgb(135, 52, 52);
+    transition: border-width 100ms 1500ms ease, top 100ms 1600ms cubic-bezier(0.23, 1, 0.32, 1), height 100ms 1600ms cubic-bezier(0.23, 1, 0.32, 1),
+    background-color 200ms ease, transform 200ms cubic-bezier(0.23, 1, 0.32, 1);
+}
+/*Стиль для иконки креста меню*/
+.menu-icon:checked + label:after, .menu-icon:not(:checked) + label:after{
+    position: absolute;
+    content: '';
+    display: block;
+    width: 22px;
+    height: 2px;
+    z-index: 20;
+    top: 10px;
+    left: 4px;
+   background-color: rgb(135, 52, 52);
+   margin-top: -1px;
+    transition: width 100ms 1700ms ease, right 100ms 1700ms ease, margin-top 100ms ease, transform 200ms cubic-bezier(0.23, 1, 0.32, 1); 
+}
+/*Анимация для изменений линий при нажатии*/
+.menu-icon:checked + label:before{
+    top: 10px;
+    transform:  rotate(45deg);
+    height: 2px;
+    background-color: rgb(135, 52, 52);
+    border-width: 0;
+    transition: border-width 100ms 340ms ease, top 100ms 300ms cubic-bezier(0.23, 1, 0.32, 1), height 100ms 300ms cubic-bezier(0.23, 1, 0.32, 1),
+    background-color 200ms 500ms ease, transform 200ms 1800ms cubic-bezier(0.23, 1, 0.32, 1);
+
+}
+/*Иконка при закрытии меню*/
+.menu-icon:checked + label:after{
+    width: 30px;
+    margin-top: 0;
+    right: 0;
+    transform: rotate(-45deg);
+    transition: width 100ms ease, right 100ms ease, margin-top 100ms 500ms ease, transform 200ms 1800ms cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+/*Вверху анимация кнопки(в разработке), внизу анимация панели
+*/
+
+.nav{
+    position: fixed;
+    top: 33px;
+    right: 50px;
+    display: block;
+    width: 80px;
+    height: 80px;
+    padding: 0;
+    margin: 0;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    background-color: #7d7f8d;
+    animation: border-transform 7s linear infinite;
+    transition: top 350ms 1100ms cubic-bezier(0.23, 1, 0.320, 1), right 350ms 110ms cubic-bezier(0.23, 1, 0.320, 1), transform 250ms 110ms ease, width 
+    650ms 400ms cubic-bezier(0.23, 1, 0.320, 1), height 650ms 400ms cubic-bezier(0.23, 1, 0.320, 1);
+}
+/*список меню*/
+.nav ul{
+    position: absolute;
+    top: 50%;
+    left: 0;
+    display: block;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    z-index: 6;
+    text-align: center;
+    transform: translateY(-50%);
+    list-style: none;
+
+}
+/*keyframes кадры для анимации изменения формы навигационной панели*/
+@keyframes border-transform{
+    0%, 100%{border-radius: 63% 38% 55% 45% / 55% 46% 53% 44%;}
+    14%{border-radius: 40% 68% 55% 45% / 49% 68% 40% 51%;}
+    28%{border-radius: 55% 48% 39% 65% / 65% 56% 43% 52%;}
+    42%{border-radius: 61% 40% 45% 45% / 65% 66% 43% 54%;}
+    56%{border-radius: 62% 40% 65% 37% / 55% 67% 53% 64%;}
+    70%{border-radius: 52% 50% 34% 55% / 65% 57% 58% 58%;}
+    84%{border-radius: 48% 55% 52% 62% / 55% 46% 47% 51%;}
+}
+
+/*Анимация для остановки анимации панели и изменения ее положения и размеров*/
+.menu-icon:checked ~ .nav{
+    animation-play-state: paused;
+    top: 50%;
+    right: 50%;
+    transform: translate(50%, -50%);
+    width: 200%;
+    height: 200%;
+    transition: top 350ms 700ms cubic-bezier(0.23, 1, 0.320, 1), right 350ms 700ms cubic-bezier(0.23, 1, 0.320, 1), transform 200ms 700ms ease, width 750ms 1000ms
+    cubic-bezier(0.23, 1, 0.320, 1), height 750ms 1000ms cubic-bezier(0.23, 1, 0.320, 1);
+}
+
+/*Выполним корректную анимацию отображения элементов меню при открытом состоянии*/
+.menu-icon:checked ~ .nav ul li{
+    pointer-events: auto;
+    visibility: visible;
+    opacity: 1;
+    transform: translateY(0);
+    transition:  opacity 350ms ease, transform 250ms ease;
+}
+.menu-icon:checked ~ .nav ul li:nth-child(1){transition-delay: 1400ms;}
+.menu-icon:checked ~ .nav ul li:nth-child(2){transition-delay: 1490ms;}
+.menu-icon:checked ~ .nav ul li:nth-child(3){transition-delay: 1580ms;}
+.menu-icon:checked ~ .nav ul li:nth-child(4){transition-delay: 1660ms;}
+.menu-icon:checked ~ .nav ul li:nth-child(5){transition-delay: 1750ms;}
+.menu-icon:checked ~ .nav ul li:nth-child(6){transition-delay: 1820ms;}
+
+/*Стиль для элементов списка*/
+.nav ul li{
+    position: relative;
+    display: block;
+    width: 100%;
+    padding: 0;
+    margin: 5px 0;
+    text-align: center;
+    list-style: none;
+    pointer-events: none;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(30px);
+    transition: all 250ms linear;
+}
+
+.nav ul li:nth-child(1){transition-delay: 220ms;}
+.nav ul li:nth-child(1){transition-delay: 180ms;}
+.nav ul li:nth-child(1){transition-delay: 100ms;}
+.nav ul li:nth-child(1){transition-delay: 60ms;}
+
+
+/*Анимация изменения цвета при наведении*/
+.nav ul li a:hover{
+text-decoration: none;
+color: rgb(135, 52, 52);
+}
+
+/*Стиль для анимации перечеркнутой линии*/
+
+/* .nav ul li a:after{
+    display: block;
+    position: absolute;
+    top: 55%;
+    content: '';
+    height: 1vh;
+    margin-top: -1vh;
+    width: 0;
+    left: 0;
+    background-color: #2c2d31;
+    opacity: 0.7;
+    transition: width 250ms linear;
+} */
+/* .nav ul li a:hover:after{
+    width: 100%;
+}
+ */
